@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    background-color: #232323;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 50px;
+    padding-left: 5px;
+    color: white;
+}
+
+
+.red {
+    color: lightgreen;
+    
+}
+
+.nav_ul {
+    padding-right: 2rem;
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.nav_ul_li_items {
+    text-decoration: none;
+    color: white;
+
+}
+
+ul li a::before {
+    content: '';
+    width: 0px;
+    height: 5px;
+    background: #00bcd4;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .5s;
+}
+
+ul li:hover a::before{
+    width: 50%;
+    transform: translateX(100%);
+}
+
+
+
+/* main  */
+
+.halut {
+    background-image: url(img-sejarah/industry-e0ea6a308e98f60aa3c184e70546f6dd.jpg);
+    padding-top: 28rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-left: 50px;
+    transform: tr;
+}
+
+
+.halut h1 {
+    font-size: 70px;
+}
+
+.halut p {
+    max-width: 50rem;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #b4c1ca;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #98a3ab;
+    transform: scale(1.1);
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+ /* rev 1  */
+.rev1 {
+    background-color: #393943;
+    height: 115vh;
+}
+
+
+
+/*line */
+.containers {
+    padding: 10rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin:  auto;
+    position: relative;
+}
+
+.line {
+    flex: 1;
+    height: 5px;
+    background-color: #98a3ab;
+    position: relative;
+}
+
+.line::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.line .to {
+    opacity: 0;
+}
+
+.line  :hover{
+    opacity: 1;
+}
+
+ /* Kebawaha  */
+.box {
+    width: 300px;
+    height: 150px;
+    background-color: lightblue;
+    margin: 20px 0 0 0;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+.active {
+    max-height: 150px;
+    opacity: 1;
+}
+
+.hover-parent {
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+
+.card {
+    margin-top: 50px;
+ position: absolute;
+    color: #232323;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background: white;
+    padding: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.hover-parent:hover .card {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.versi  {
+    padding: 2rem 0 0 8rem;
+    font-size: 25px;
+}
+
+.card p {
+    color:#232323;
+}
+
+.card img {
+    width: 250px;
+}
